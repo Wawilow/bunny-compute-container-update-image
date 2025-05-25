@@ -1,0 +1,27 @@
+name: Update Bunnynet Compute Container App image
+author: wawilow, but build on top of github.com/BunnyWay/actions by Bunny Devs
+description: Use this action to update the image in a Container
+
+permissions:
+  contents: read
+
+inputs:
+  api_key:
+    description: The API key for your Bunny account
+    required: true
+
+  app_id:
+    description: The Container Application ID.
+    required: true
+
+  image_tag:
+    description: The new image.
+    required: true
+
+runs:
+  using: 'node20'
+  main: '.lib-action/index.js'
+
+branding:
+  color: 'white'
+  icon: 'package'
